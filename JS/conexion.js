@@ -1,5 +1,5 @@
 let pokemones = [];
-let totalPokes = 1025;
+let totalPokes = 50;
 
 // Conexión para obtener la lista de Pokémon
 async function conexionLista() {
