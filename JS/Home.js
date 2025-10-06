@@ -15,18 +15,11 @@ function buscadorfuncion(sza){
     }
 }
 
+//Genera una lista por medio de un array - Favoritos - Filtrado - Categorias
 function generarLista(arraypokemones) {
     let listaHTML = "";
     for (let i = 0; i < arraypokemones.length; i++) {
-        let id = "";
-
-        // 🔥 Corregido: cuando no viene url, evitamos error
-        if (arraypokemones[i].url) {
-            id = arraypokemones[i].url.split("/")[6];
-        } else {
-            continue; // si no hay url, lo saltamos
-        }
-
+        let id = arraypokemones[i].url.split("/")[6];
         listaHTML += `
         <div class="c-lista-pokemon poke-${id}" onclick="Detalle('${id}')">
             <p>#${id}</p>
@@ -39,8 +32,9 @@ function generarLista(arraypokemones) {
 }
 
 function Home(filtro){
+
     var root = document.getElementById("root");
-    
+    root.innerHTML = ""
     //buscador
     const buscador = document.createElement("input");
     buscador.classList.add("c-buscador");
@@ -69,8 +63,10 @@ function Home(filtro){
             FiltroConexion(tipos[i]); 
         });
 
+        // Agregar el botón al contenedor
         contenedorFiltro.appendChild(btn);
     }
+
 
     //add contenedor lista
     const listaHTML = generarLista(pokemones);
