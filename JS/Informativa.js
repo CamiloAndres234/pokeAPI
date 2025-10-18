@@ -75,3 +75,58 @@ async function Detalle(parametro) {
 
     root.innerHTML = detalle;
 }
+
+// Extra xd 
+function Informativa() {
+  const root = document.getElementById("root");
+  root.innerHTML = `
+    <section class="info-app">
+      <img src="https://raw.githubusercontent.com/PokeAPI/media/master/logo/pokeapi_256.png" alt="Logo PokeAPI" class="logo-app">
+
+      <h2>📘 Guía del Entrenador Pokémon</h2>
+      <p>
+        Aquí encontrarás información útil sobre cómo aprovechar al máximo la 
+        <strong>PokéAPI App</strong> — desde buscar Pokémon, hasta gestionar tus favoritos y descubrir sus habilidades. ⚡
+      </p>
+
+      <div class="tarjetas-info">
+
+        <div class="tarjeta">
+          <h3>🔍 Búsqueda Pokémon</h3>
+          <p>
+            Puedes buscar Pokémon por <strong>nombre</strong> o <strong>tipo</strong>.  
+            La app mostrará sus estadísticas, habilidades y su imagen oficial de la PokéAPI.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>💛 Favoritos</h3>
+          <p>
+            Al hacer clic en el botón <strong>❤️ Favorito</strong>, puedes guardar tus Pokémon preferidos.  
+            Se almacenan en el navegador mediante <strong>LocalStorage</strong>, así que no se pierden al cerrar la página.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>⚔️ Tipos y habilidades</h3>
+          <p>
+            Cada Pokémon posee uno o dos tipos que determinan su desempeño en batalla.  
+            Explora sus <strong>movimientos</strong> y <strong>habilidades especiales</strong> en el detalle.
+          </p>
+        </div>
+
+        <div class="tarjeta">
+          <h3>🧠 Consejos del Profesor Oak</h3>
+          <p>
+            🌿 Experimenta con los filtros y descubre especies únicas.<br>
+            💾 Guarda tus favoritos y mantén tu Pokédex actualizada.<br>
+            🔥 ¡Atrápalos a todos y conviértete en un verdadero Maestro Pokémon!
+          </p>
+        </div>
+
+      </div>
+    </section>
+  `;
+}
+
+
