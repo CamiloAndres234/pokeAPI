@@ -1,4 +1,4 @@
-/* --- ESTILO GENERAL --- */
+/* ESTILO GENERAL */
 body {
   font-family: 'Arial Rounded MT Bold', 'Segoe UI', sans-serif;
   background-color: #ffffff;
@@ -14,7 +14,7 @@ h1 {
   margin-top: 20px;
 }
 
-/* --- NAV --- */
+/* NAV */
 nav {
   background-color: #ff1c1c;
   padding: 10px;
@@ -22,6 +22,7 @@ nav {
   display: flex;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 
 nav button {
@@ -40,7 +41,7 @@ nav button:hover {
   transform: scale(1.05);
 }
 
-/* --- BUSCADOR --- */
+/* BUSCADOR */
 .c-buscador {
   margin: 15px auto;
   padding: 8px;
@@ -108,7 +109,7 @@ nav button:hover {
   margin: 0 auto;
 }
 
-/* --- DETALLE DE POKEMON --- */
+/* DETALLE DE POKEMON */
 .c-detalle {
   background-color: #ffffff;
   border: 5px solid #000;
@@ -149,12 +150,12 @@ nav button:hover {
   transform: scale(1.05);
 }
 
-/* --- FAVORITOS VACÍOS --- */
+/* FAVORITOS VACÍOS */
 #root p {
   font-size: 18px;
 }
 
-/* --- SCROLLBAR PERSONALIZADA --- */
+/* SCROLLBAR PERSONALIZADA */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -167,7 +168,7 @@ nav button:hover {
   background-color: #fff;
 }
 
-/* --- EFECTO DE ENTRADA (TRANSICIÓN POKÉDEX) --- */
+/* EFECTO DE ENTRADA (TRANSICIÓN POKÉDEX) */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -183,7 +184,7 @@ nav button:hover {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* --- SECCIÓN ORIGINAL (INFORMATIVA DE LA APP) --- */
+/* SECCIÓN ORIGINAL (INFORMATIVA DE LA APP) */
 .info-app {
   background-color: #ffffff;
   border: 5px solid #000;
@@ -277,4 +278,99 @@ nav button:hover {
   text-decoration: underline;
 }
 
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .info-app {
+    width: 95%;
+    padding: 20px;
+  }
+  .banner-poke {
+    width: 80%;
+  }
+}
 
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav button {
+    width: 80%;
+  }
+
+  .c-buscador {
+    width: 85%;
+    font-size: 14px;
+  }
+
+  .tipos-container button {
+    padding: 5px 10px;
+    font-size: 14px;
+  }
+
+  .c-contenedor-lista {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 10px;
+  }
+
+  .c-detalle {
+    width: 85%;
+    padding: 15px;
+  }
+
+  .logo-app {
+    width: 140px;
+  }
+
+  .banner-poke {
+    width: 90%;
+  }
+
+  .tarjetas-info {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .info-app h2 {
+    font-size: 20px;
+  }
+
+  .info-app p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  nav button {
+    width: 90%;
+    font-size: 13px;
+    padding: 5px;
+  }
+
+  .c-buscador {
+    width: 90%;
+    font-size: 13px;
+  }
+
+  .c-lista-pokemon {
+    padding: 8px;
+  }
+
+  .c-detalle p {
+    font-size: 13px;
+  }
+
+  .tarjeta p {
+    font-size: 13px;
+  }
+}
